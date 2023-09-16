@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Coder YES!
+locale: "zh-CN"
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -62,12 +63,12 @@ author:
   avatar : "/assets/images/qrcode.png"
   bio    : "原创Blog, 包括编程语言,计算机网络,操作系统,CICD以及各种软件。"
   links:
+    - label: "coderyes.com"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.coderyes.com"
     - label: "coderyes@outlook.com"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:coderyes@outlook.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://www.coderyes.com"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
