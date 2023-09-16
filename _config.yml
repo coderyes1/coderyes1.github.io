@@ -62,7 +62,7 @@ author:
   avatar : "/assets/images/qrcode.png"
   bio    : "原创Blog, 包括编程语言,计算机网络,操作系统,CICD以及各种软件。"
   links:
-    - label: "Email"
+    - label: "coderyes@outlook.com"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:coderyes@outlook.com"
     - label: "Website"
