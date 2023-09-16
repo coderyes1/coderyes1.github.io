@@ -77,7 +77,7 @@ plugins:
 #     # - label: "Instagram"
 #     #   icon: "fab fa-fw fa-instagram"
 #     #   url: "https://instagram.com/"
-
+sidebar_enabled: true
 sidebar:
   - title: "Title"
     image: http://placehold.it/350x250
@@ -104,7 +104,8 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
+      sidebar: true
       read_time: true
       comments: true
       share: true
