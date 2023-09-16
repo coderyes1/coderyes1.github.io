@@ -57,33 +57,26 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-# author:
-#   name   : "First Lastname"
-#   avatar : "/assets/images/qrcode.png"
-#   bio    : "原创Blog, 包括编程语言,计算机网络,操作系统,CICD以及各种软件。"
-#   links:
-#     - label: "coderyes.com"
-#       icon: "fas fa-fw fa-link"
-#       url: "https://www.coderyes.com"
-#     - label: "coderyes@outlook.com"
-#       icon: "fas fa-fw fa-envelope-square"
-#       url: "mailto:coderyes@outlook.com"
-#     # - label: "Twitter"
-#     #   icon: "fab fa-fw fa-twitter-square"
-#     #   url: "https://twitter.com/"
-#     # - label: "GitHub"
-#     #   icon: "fab fa-fw fa-github"
-#     #   url: "https://github.com/"
-#     # - label: "Instagram"
-#     #   icon: "fab fa-fw fa-instagram"
-#     #   url: "https://instagram.com/"
-sidebar_enabled: true
-sidebar:
-  - title: "Title"
-    image: http://placehold.it/350x250
-    image_alt: "image"
-    text: "Some text here."
-
+author:
+  name   : "First Lastname"
+  #avatar : "/assets/images/qrcode.png"
+  bio    : "原创Blog, 包括编程语言,计算机网络,操作系统,CICD以及各种软件。"
+  links:
+    - label: "coderyes.com"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.coderyes.com"
+    - label: "coderyes@outlook.com"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:coderyes@outlook.com"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
+    # - label: "GitHub"
+    #   icon: "fab fa-fw fa-github"
+    #   url: "https://github.com/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
 
 footer:
   links:
@@ -104,8 +97,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: false
-      sidebar: true
+      author_profile: true
       read_time: true
       comments: true
       share: true
