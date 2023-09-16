@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "First Lastname"
   avatar : "/assets/images/qrcode.png"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "原创Blog, 包括编程语言,计算机网络,操作系统,CICD以及各种软件。"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
