@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on coderyes.com</title>
+        <link>https://www.coderyes.com/tags/</link>
+        <description>Recent content in Tags on coderyes.com</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 25 Aug 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.coderyes.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Assemble</title>
+        <link>https://www.coderyes.com/tags/assemble/</link>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.coderyes.com/tags/assemble/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>C&#43;&#43;</title>
+        <link>https://www.coderyes.com/tags/c&#43;&#43;/</link>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.coderyes.com/tags/c&#43;&#43;/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Go</title>
+        <link>https://www.coderyes.com/tags/go/</link>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.coderyes.com/tags/go/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Modern C&#43;&#43;</title>
+        <link>https://www.coderyes.com/tags/modern-c&#43;&#43;/</link>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.coderyes.com/tags/modern-c&#43;&#43;/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://www.coderyes.com/tags/python/</link>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.coderyes.com/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Threads</title>
+        <link>https://www.coderyes.com/tags/threads/</link>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.coderyes.com/tags/threads/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>X86</title>
+        <link>https://www.coderyes.com/tags/x86/</link>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.coderyes.com/tags/x86/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>汇编</title>
+        <link>https://www.coderyes.com/tags/%E6%B1%87%E7%BC%96/</link>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.coderyes.com/tags/%E6%B1%87%E7%BC%96/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

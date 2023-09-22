@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Python 入门知识'>
+<title>Python</title>
+
+<link rel='canonical' href='https://www.coderyes.com/p/python/'>
+
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Python'>
+<meta property='og:description' content='Python 入门知识'>
+<meta property='og:url' content='https://www.coderyes.com/p/python/'>
+<meta property='og:site_name' content='coderyes.com'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2017-08-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-08-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Python">
+<meta name="twitter:description" content="Python 入门知识">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hubd26e61083226f2cd8bb9bcc04a51a4e_9354_300x0_resize_box_3.png" width="300"
+                            height="280" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">coderyes.com</a></h1>
+            <h2 class="site-description">记录学习过程，分享实用工具</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#basic-concept">basic concept</a></li>
+    <li><a href="#string">string</a></li>
+    <li><a href="#container">container</a></li>
+    <li><a href="#class">class</a></li>
+    <li><a href="#with">with</a></li>
+    <li><a href="#异常处理">异常处理</a></li>
+    <li><a href="#读取可变长度参数">读取可变长度参数</a></li>
+    <li><a href="#numpy">numpy</a>
+      <ol>
+        <li><a href="#dataframe">dataframe</a></li>
+        <li><a href="#numpyseriesdataframe的区别">numpy、series、dataframe的区别</a></li>
+      </ol>
+    </li>
+    <li><a href="#constants-variables-operations-in-tensorflow">constants, variables, operations in tensorflow</a></li>
+    <li><a href="#参数传递">参数传递</a></li>
+    <li><a href="#对象的几种移除方法差别">对象的几种移除方法差别</a></li>
+    <li><a href="#assert用法">assert用法</a></li>
+    <li><a href="#判断相等">判断相等</a></li>
+    <li><a href="#iterator">Iterator</a></li>
+    <li><a href="#generator">Generator</a></li>
+    <li><a href="#decorator">Decorator</a></li>
+    <li><a href="#descriptor">Descriptor</a></li>
+    <li><a href="#__dict__"><code>__dict__</code></a></li>
+    <li><a href="#实例方法与类方法同名">实例方法与类方法同名</a></li>
+    <li><a href="#访问attributemethod原理">访问attribute/method原理</a></li>
+    <li><a href="#__get__-与-__getattr__-与-__getattribute__-区别"><code>__get__</code> 与 <code>__getattr__</code> 与 <code>__getattribute__</code> 区别</a></li>
+    <li><a href="#设置attribute">设置attribute</a></li>
+    <li><a href="#__call__"><code>__call__</code></a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/programming-language/" >
+                Programming Language
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/python/">Python</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Python 入门知识
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 25, 2017</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="basic-concept">basic concept</h2>
+<ul>
+<li>python 中<code>一切皆为对象</code>，即使类本身也是一种对象(类对象/Class Objects)，所以避免使用其他语言中的<code>instance</code>,而是<code>instance object</code>,<code>class object</code>,<code>method object</code>.</li>
+<li>使用<code>attribute(属性)</code>来表达成员的含义，有<code>数据属性</code>以及<code>方法属性</code>,一个<code>object</code>=<code>数据属性</code>+<code>方法属性</code></li>
+<li><code>function</code>与<code>method</code>有区别，前者一般指普通函数，后者一般指的是bounding method(instance object 的方法属性）</li>
+<li>我的形象理解，python的世界中，有三种层级的对象，分别负责创建下一级别的对象，由上到下是type关系，不是继承关系
+<ul>
+<li>第一阶级：metaclass/type object。</li>
+<li>第二阶级：class object。</li>
+<li>第三阶级：instance object.</li>
+</ul>
+<blockquote>
+<ul>
+<li>常说的UML图中，描述的是同一阶级内部之间的继承关系（主要第二层），与不同阶级无关。python可以用<code>issubclass()</code> 检查。</li>
+<li><code>type()</code>可以查看其上一层级的object，或者说这个对象是由哪个类对象创造的</li>
+<li>metaclass比较神奇，因为其type为自身。其父类也是自身。</li>
+<li>object类对象，跨越一二层，是他们公共的父类。</li>
+<li>第一阶层，实际编程很少需要考虑。</li>
+</ul>
+</blockquote>
+</li>
+<li>python中所有的方法都是虚方法</li>
+<li>与C不同，在函数内部默认不使用全部变量，除非使用global指定，且if,for,while,try之类的关键字不会产生作用域。</li>
+<li>python3 中的round()函数并不是四舍五入的，应该是
+<code>四舍，六入，五选偶</code>，这样做是保证总误差不会被累积。</li>
+<li>lambda函数的写法 <code>lambda x: x+1</code></li>
+<li><code>map()</code> 在python中一个函数，而非Dict(),注意与C++区别，他会给每个元素执行一遍函数，并且返回一个可以迭代的map对象。也可以通过list()等方法，转成list对象。</li>
+<li>sort方法会inplace修改对象，sorted不会。</li>
+</ul>
+<h2 id="string">string</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="s2">&#34;123&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="s2">&#34;456&#34;</span> <span class="c1"># 字符串之间的拷贝都是深拷贝</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">path_t</span> <span class="o">=</span><span class="sa">r</span><span class="s2">&#34;D:\worksapce_python\20160426_cp\training&#34;</span> <span class="c1"># 禁止使用转义字符</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">123</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">456</span>
+</span></span><span class="line"><span class="cl"><span class="n">c1</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;a=</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">, b=</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&#34;</span> <span class="c1"># 两种初始化方法 1</span>
+</span></span><span class="line"><span class="cl"><span class="n">c2</span> <span class="o">=</span> <span class="s2">&#34;a=</span><span class="si">{}</span><span class="s2">, b=</span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="c1"># 两种初始化方法 2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="container">container</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#list, 顺序容器，支持随机访问，类似c++中的std::vector.</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#两种初始化方法</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#set/dict, 无序哈希表，不是RB tree，但在python3中遍历顺序与插入顺序相同。</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">#{}默认带key,即dict</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#tuple, 不可改变的list</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="class">class</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyBaseClass</span><span class="p">:</span>  <span class="c1"># 类命名一般使用驼峰</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># 初始化函数，self是约定俗成的，不是强制的</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;name&#34;</span>  <span class="c1"># 在这里增加数据属性，也可以在外部添加</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_counter</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 私有变量一般使用_开头，外部也可以强制访问</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">print_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># 方法属性命名一般使用下划线开头</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&#34;this is the &#34;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_counter</span><span class="p">,</span> <span class="s2">&#34;time&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyDerivedClass</span><span class="p">(</span><span class="n">MyBaseClass</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base</span> <span class="o">=</span> <span class="n">MyBaseClass</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base2</span> <span class="o">=</span> <span class="n">base</span>
+</span></span><span class="line"><span class="cl">    <span class="n">derived</span> <span class="o">=</span> <span class="n">MyDerivedClass</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="nb">issubclass</span><span class="p">(</span><span class="n">MyDerivedClass</span><span class="p">,</span><span class="n">MyBaseClass</span><span class="p">))</span> <span class="c1"># issubclass 只是用来衡量两个类对象之间的关系。</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">base</span><span class="p">,</span><span class="n">MyBaseClass</span><span class="p">))</span> <span class="c1"># isinstance 用来衡量类对象与实例对象之间的关系。</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">base</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span> <span class="c1"># 显示object的type/类</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">base</span><span class="p">)))</span> <span class="c1"># type 是元类</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base</span><span class="o">.</span><span class="n">print_name</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    print_name是一个function object，是MyBaseClass的一个属性，base.print_name会调用`_get_`生成一个临时的boudingd method方法。然后再调用
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="with">with</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">b</span> <span class="k">as</span> <span class="n">a</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">code</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>等价流程</p>
+<ol>
+<li>a = b.<strong>enter</strong></li>
+<li>code</li>
+<li>b.<strong>exit</strong></li>
+</ol>
+<blockquote>
+<p><code>as a</code> 是一个option，不是必须的</p>
+</blockquote>
+<h2 id="异常处理">异常处理</h2>
+<ol>
+<li>try 模块中通过raise抛出异常</li>
+<li>{except else(可选)}处理异常情况 or 不处理</li>
+<li>finally(可选) 执行相关代码</li>
+<li>如果异常没有处理，则继续向上传送异常。</li>
+</ol>
+<h2 id="读取可变长度参数">读取可变长度参数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_two</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span> <span class="o">=</span> <span class="n">args</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;arg1: </span><span class="si">{</span><span class="n">arg1</span><span class="si">}</span><span class="s2">, arg2: </span><span class="si">{</span><span class="n">arg2</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="numpy">numpy</h2>
+<p>numpy 中matrix是array的一个子类，是严格意义上的二维矩阵，区别是<code>*</code>在matrix是矩阵乘法,而array是代表对应位置的元素相乘。</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th></th>
+<th>叉乘(标准)</th>
+<th>点乘(逐元素)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>array</td>
+<td>dot <code>@</code></td>
+<td>multiply <code>*</code></td>
+</tr>
+<tr>
+<td>matrix</td>
+<td>dot <code>@</code> <code>*</code></td>
+<td>multiply</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<ul>
+<li><code>@</code>新版本推荐使用这个符号来表示矩阵的乘法</li>
+</ul>
+</blockquote>
+<p>numpy 会自动把列向量转成行向量, 转置操作对行向量无效,需要reshape。</p>
+<ul>
+<li><code>np.array([1,2,3])</code> //这是一个数组（行向量），shape为(3,),无法执行转置T,可以reshape</li>
+<li><code>np.array([[1,2,3]])</code> //这是一个矩阵,shape为（1*3）</li>
+</ul>
+<p>产生随机数 <code>np.random.rand(50)*100</code><br>
+产生顺序值 <code>np.arange(3,7,2)</code><br>
+将二维变成1维 <code>x.flatten()</code></p>
+<blockquote>
+<p>里面的索引方式都是先行后列的，创建shape的时候也是如此。</p>
+</blockquote>
+<h3 id="dataframe">dataframe</h3>
+<ol>
+<li>dataframe 是一列列series对象(numpy的增强版)的集合.</li>
+<li>列读取
+<ul>
+<li><code>df['time']</code> //取出其中的一列,取出的是series对象，这里不能用数字/index,需要string</li>
+<li><code>df[['time']]</code> //取出其中的一列，取出的是一个data frame 对象， 因为[&rsquo;time&rsquo;],实际上是一个list.</li>
+</ul>
+</li>
+<li>行读取
+<ul>
+<li><code>df.iloc[0]</code> /基于row number，输入行号,不是索引值,这里返回同样是一个series对象</li>
+<li><code>df.iloc[[0]]</code> //取出的就是一个dataframe对象</li>
+<li><code>df.loc[&quot;john&quot;]</code> //基于index的具体内容</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>注意，<code>[]</code>不一定完全是按照列读取，如果使用df[1:3],是按照行去读取，这里容易出错。 <br>
+Ref: <a class="link" href="https://pandas.pydata.org/pandas-docs/version/1.3/user_guide/10min.html"  target="_blank" rel="noopener"
+    >https://pandas.pydata.org/pandas-docs/version/1.3/user_guide/10min.html</a></p>
+</blockquote>
+<h3 id="numpyseriesdataframe的区别">numpy、series、dataframe的区别</h3>
+<ul>
+<li>series是带索引的增强版numpy,其索引可以是任意类型的数据，支持分区提取，例如data[&lsquo;c&rsquo;:&lsquo;f&rsquo;]
+<blockquote>
+<p>在索引的时候，中括号内的整数其实指的是索引数组中的实际值，而不是位置值，如果，我们按照位置来取值的话，反而会出错。例如a[0]</p>
+</blockquote>
+</li>
+<li>dataframe相同索引的Series对象排列，就形成了DataFrame。</li>
+</ul>
+<h2 id="constants-variables-operations-in-tensorflow">constants, variables, operations in tensorflow</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># first, create a TensorFlow constant</span>
+</span></span><span class="line"><span class="cl"><span class="n">const</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;const&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># create TensorFlow variables</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># now create some operations</span>
+</span></span><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">e</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">const</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># setup the variable initialisation</span>
+</span></span><span class="line"><span class="cl"><span class="n">init_op</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># initialise the variables</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">init_op</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># compute the output of the graph</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a_out</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Variable a is </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a_out</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Variable a is </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">const</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<ol>
+<li>as the Python code runs through these commands, the variables haven’t actually been declared as they would have been if you just had a standard Python declaration (i.e. b = 2.0).  Instead, all the constants, variables, operations and the computational graph are only created when the initialisation commands are run.</li>
+<li><code>d e f</code> is not a variable but an operation</li>
+</ol>
+</blockquote>
+<h2 id="参数传递">参数传递</h2>
+<p>所有的都是引用传递，但是不可变对象重新赋值的时候，会产生一个新对象。</p>
+<ul>
+<li>可变对象（比如字典或者列表）</li>
+<li>不可变对象（比如数字、字符或者元组）</li>
+</ul>
+<h2 id="对象的几种移除方法差别">对象的几种移除方法差别</h2>
+<ul>
+<li>remove 移除对应value的元素</li>
+<li>pop 移除对应index的元素，并且返回改对象</li>
+<li>del 移除对应index的元素</li>
+</ul>
+<blockquote>
+<p>Ref: <a class="link" href="https://stackoverflow.com/questions/11520492/difference-between-del-remove-and-pop-on-lists"  target="_blank" rel="noopener"
+    >https://stackoverflow.com/questions/11520492/difference-between-del-remove-and-pop-on-lists</a></p>
+</blockquote>
+<h2 id="assert用法">assert用法</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#if condition returns False, AssertionError is raised:</span>
+</span></span><span class="line"><span class="cl"><span class="k">assert</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&#34;goodbye&#34;</span><span class="p">,</span> <span class="s2">&#34;x should be &#39;hello&#39;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="判断相等">判断相等</h2>
+<ul>
+<li><code>==</code> 判断两个对象是否相等</li>
+<li><code>is</code> 判断两个对象是否为同一个对象</li>
+</ul>
+<h2 id="iterator">Iterator</h2>
+<p>常用以下函数</p>
+<ul>
+<li><code>iter()</code> 可以返回第一个元素的迭代器</li>
+<li><code>next()</code> 跳到下一个元素，但是返回当前元素</li>
+<li><code>filter()</code> 函数返回指向所有合格的元素的迭代器</li>
+</ul>
+<h2 id="generator">Generator</h2>
+<p>Generator 是Iterator的子类,<code>print(issubclass(Generator,Iterator))</code>。通过yield关键字创建，主要有一下两种方式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># way 1</span>
+</span></span><span class="line"><span class="cl"><span class="n">num_generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 不能使用中括号`num_list = [x*2 for x in range(1,3)]`，否则就变成了list</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># way2</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">firstn</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">yield</span> <span class="n">num</span> <span class="c1"># 下一次进入从这里执行。</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="decorator">Decorator</h2>
+<p>装饰器就是给函数增加前置或者后置的操作，内部是执行装饰器函数，然后把被装饰的对象传入。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">func</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@decorator</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">func</span><span class="p">()</span> <span class="c1"># 函数调用# 输出：0.800644397735595</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 执行func()，其实是在执行 decorator(func)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>类装饰器与普通装饰器也类似，__call__实际上类似重载了()运算符</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Decorator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">f</span> <span class="o">=</span> <span class="n">f</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;decorator start&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;decorator end&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@decorator</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="n">Decorator</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="c1"># p是类Decorator的一个实例</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="p">()</span> <span class="c1"># 实现了__call__()方法后，p可以被调用</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="descriptor">Descriptor</h2>
+<p>Definition：一种特殊的class,如果一个Class有<code>__get__</code>,<code>__set__</code>,<code>__delete__</code>方法，那么这个Class就是一个Descriptor.</p>
+<ul>
+<li>当外界access(get,set,delete)这个变量时，就会自动调用相应的函数</li>
+<li>Descriptors only work when used as class variables. When put in instances, they have no effect.</li>
+<li>所有的function都包含<code>__get__</code>, 都是descriptor, 准确点是non-data descriptor.</li>
+<li>等同代码 <code>f.x</code> would cause <code>type(f).__dict__['x'].__get__</code> to be called, and <code>f.x = 3</code> would call <code>type(f).__dict__['x'].__set__(3)</code>.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">objtype</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s2">&#34;call the get method&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">House</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">c</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">House</span><span class="o">.</span><span class="n">d</span><span class="p">))</span> <span class="c1"># House.d返回是一个str 对象</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">House</span><span class="o">.</span><span class="n">c</span><span class="p">))</span> <span class="c1"># House.c返回是一个cat对象</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">House</span><span class="p">()</span><span class="o">.</span><span class="n">d</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## 使用举例，用作数据转换</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Number</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">getx</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">neg_value</span><span class="o">=</span><span class="nb">property</span><span class="p">(</span><span class="n">getx</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="s2">&#34;what&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">n</span> <span class="o">=</span> <span class="n">Number</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">n</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">neg_value</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Ref: <a class="link" href="https://codesachin.wordpress.com/2016/06/09/the-magic-behind-attribute-access-in-python/"  target="_blank" rel="noopener"
+    >https://codesachin.wordpress.com/2016/06/09/the-magic-behind-attribute-access-in-python/</a></p>
+</blockquote>
+<h2 id="__dict__"><code>__dict__</code></h2>
+<p><code>__dict__</code> 可以打印出对象所有的成员，及其对应的值。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">House</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span> <span class="c1"># 两者等价</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">vars</span><span class="p">(</span><span class="n">House</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>访问属性的查找顺序(有待纠正)</p>
+<ol>
+<li>descriptor</li>
+<li>instance.<strong>dict</strong></li>
+<li>class.<strong>dict</strong></li>
+</ol>
+<blockquote>
+<p>class attribute 是不出现在 instance attribute 里面的。</p>
+</blockquote>
+<h2 id="实例方法与类方法同名">实例方法与类方法同名</h2>
+<p>实例方法会被覆盖</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Bar</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;instance method&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@classmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;class method&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">Bar</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">fun</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">Bar</span><span class="o">.</span><span class="n">fun</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>两者都会print class method</p>
+<h2 id="访问attributemethod原理">访问attribute/method原理</h2>
+<p>Object访问attribute以及调用instance method都是线调用<code>__getattr__</code>函数,return一个对象。这个对象如果callable, 就成了函数</p>
+<blockquote>
+<p>例外情况：如果这个attribute已经初始化，就不会调用<code>getattr</code>函数。
+<code>__getattribute__</code> 不管变量是否已经存在，都会调用。</p>
+</blockquote>
+<h2 id="__get__-与-__getattr__-与-__getattribute__-区别"><code>__get__</code> 与 <code>__getattr__</code> 与 <code>__getattribute__</code> 区别</h2>
+<ol>
+<li>查找lookuptable</li>
+<li>找到，执行(默认/override)<code>__get__</code>函数</li>
+<li>找不到，执行(默认/override)<code>__getattr__</code>函数</li>
+</ol>
+<blockquote>
+<p><code>__getattribute__</code> 将会屏蔽上述所有操作。</p>
+</blockquote>
+<h2 id="设置attribute">设置attribute</h2>
+<p>对某个属性进行赋值时，调用<code>__setattr__</code>函数</p>
+<p>del 某个属性，其实也是调用函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">        <span class="nd">@name.deleter</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;Number Six&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="__call__"><code>__call__</code></h2>
+<p>python 的__call__属性就是重载call函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Test</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="n">Test</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>object() is shorthand for object.<strong>call</strong>()</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/python/">Python</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>遵循<a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0</a>协议，转载请附上出处链接及本声明。(Licensed under <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"  target="_blank" rel="noopener"
+    >CC BY-NC-SA 4.0</a>）</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/assemble/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Assemble</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/c-/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">C&#43;&#43;</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/go/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Go</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 coderyes.com
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
